@@ -1,0 +1,1010 @@
+local enemyOrder = {
+
+    "King Slime",
+
+    "Zombie Mushroom",
+
+    "Thief",
+
+    "Slime",
+
+    "Grass Spirit",
+
+    "Sand Elemental",
+
+    "Desert Bandit",
+
+    "Stray Sand Storm",
+
+    "Sand Golem",
+
+    "Fog Spirit",
+
+    "Venom Shroom",
+
+    "Cursed Corpse",
+
+    "Cess Horror",
+
+    "Magma Golem",
+
+    "Lava Crab"
+
+}
+
+
+
+local attackOrder = {
+
+    "Strike",
+
+    "Barrage"
+
+}
+
+local OUTERCALDERAPOS = CFrame.new(-227, 54, -2941)
+
+
+
+local ScreenGui = Instance.new("ScreenGui")
+
+local MF = Instance.new("Frame")
+
+local CONTENT = Instance.new("Frame")
+
+local TPs = Instance.new("ScrollingFrame")
+
+local AutoDoctor = Instance.new("TextButton")
+
+local UIGridLayout = Instance.new("UIGridLayout")
+
+local Caldera = Instance.new("TextButton")
+
+local Autos = Instance.new("ScrollingFrame")
+
+local AutoDodge = Instance.new("TextButton")
+
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+
+local AutoFarmCaldera = Instance.new("TextButton")
+
+local NAV = Instance.new("ScrollingFrame")
+
+local TPs_2 = Instance.new("TextButton")
+
+local Autos_2 = Instance.new("TextButton")
+
+local UIGridLayout_3 = Instance.new("UIGridLayout")
+
+local Drag = Instance.new("TextButton")
+
+local TOPBAR = Instance.new("Frame")
+
+local CLOSE = Instance.new("TextButton")
+
+local MIN = Instance.new("TextButton")
+
+ 
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ 
+
+MF.Name = "MF"
+
+MF.Parent = ScreenGui
+
+MF.BackgroundColor3 = Color3.fromRGB(130, 130, 130)
+
+MF.BackgroundTransparency = 0.250
+
+MF.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+MF.BorderSizePixel = 0
+
+MF.Position = UDim2.new(0.600000024, 0, 0.649999976, 0)
+
+MF.Size = UDim2.new(0.300000012, 0, 0.224999994, 0)
+
+ 
+
+CONTENT.Name = "CONTENT"
+
+CONTENT.Parent = MF
+
+CONTENT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+CONTENT.BackgroundTransparency = 1.000
+
+CONTENT.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+CONTENT.BorderSizePixel = 0
+
+CONTENT.Position = UDim2.new(0.25, 0, 0.100000069, 0)
+
+CONTENT.Size = UDim2.new(0.749291241, 0, 0.895860553, 0)
+
+ 
+
+TPs.Name = "TPs"
+
+TPs.Parent = CONTENT
+
+TPs.Active = true
+
+TPs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+TPs.BackgroundTransparency = 1.000
+
+TPs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+TPs.BorderSizePixel = 0
+
+TPs.Size = UDim2.new(1, 0, 1, 0)
+
+TPs.Visible = false
+
+ 
+
+AutoDoctor.Name = "AutoDoctor"
+
+AutoDoctor.Parent = TPs
+
+AutoDoctor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+AutoDoctor.BackgroundTransparency = 0.250
+
+AutoDoctor.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoDoctor.BorderSizePixel = 0
+
+AutoDoctor.Size = UDim2.new(0, 200, 0, 50)
+
+AutoDoctor.Font = Enum.Font.SourceSans
+
+AutoDoctor.Text = "Doc Heal"
+
+AutoDoctor.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoDoctor.TextSize = 14.000
+
+ 
+
+UIGridLayout.Parent = TPs
+
+UIGridLayout.FillDirection = Enum.FillDirection.Vertical
+
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIGridLayout.CellPadding = UDim2.new(0, 10, 0, 10)
+
+UIGridLayout.CellSize = UDim2.new(0.75, 0, 0.100000001, 0)
+
+ 
+
+Caldera.Name = "Caldera"
+
+Caldera.Parent = TPs
+
+Caldera.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Caldera.BackgroundTransparency = 0.250
+
+Caldera.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Caldera.BorderSizePixel = 0
+
+Caldera.Size = UDim2.new(0, 200, 0, 50)
+
+Caldera.Font = Enum.Font.SourceSans
+
+Caldera.Text = "Caldera Town"
+
+Caldera.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+Caldera.TextSize = 14.000
+
+ 
+
+Autos.Name = "Autos"
+
+Autos.Parent = CONTENT
+
+Autos.Active = true
+
+Autos.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Autos.BackgroundTransparency = 1.000
+
+Autos.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Autos.BorderSizePixel = 0
+
+Autos.Size = UDim2.new(1, 0, 1, 0)
+
+ 
+
+AutoDodge.Name = "AutoDodge"
+
+AutoDodge.Parent = Autos
+
+AutoDodge.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+AutoDodge.BackgroundTransparency = 0.250
+
+AutoDodge.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoDodge.BorderSizePixel = 0
+
+AutoDodge.Size = UDim2.new(0, 200, 0, 50)
+
+AutoDodge.Font = Enum.Font.SourceSans
+
+AutoDodge.Text = "Auto Dodge: OFF"
+
+AutoDodge.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoDodge.TextSize = 14.000
+
+ 
+
+UIGridLayout_2.Parent = Autos
+
+UIGridLayout_2.FillDirection = Enum.FillDirection.Vertical
+
+UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIGridLayout_2.CellPadding = UDim2.new(0, 10, 0, 10)
+
+UIGridLayout_2.CellSize = UDim2.new(0.75, 0, 0.100000001, 0)
+
+ 
+
+AutoFarmCaldera.Name = "AutoFarmCaldera"
+
+AutoFarmCaldera.Parent = Autos
+
+AutoFarmCaldera.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+AutoFarmCaldera.BackgroundTransparency = 0.250
+
+AutoFarmCaldera.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoFarmCaldera.BorderSizePixel = 0
+
+AutoFarmCaldera.Size = UDim2.new(0, 200, 0, 50)
+
+AutoFarmCaldera.Font = Enum.Font.SourceSans
+
+AutoFarmCaldera.Text = "Auto Farm Caldera: OFF"
+
+AutoFarmCaldera.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+AutoFarmCaldera.TextSize = 14.000
+
+ 
+
+NAV.Name = "NAV"
+
+NAV.Parent = MF
+
+NAV.Active = true
+
+NAV.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+
+NAV.BackgroundTransparency = 0.250
+
+NAV.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+NAV.BorderSizePixel = 0
+
+NAV.Position = UDim2.new(0, 0, 0.100000069, 0)
+
+NAV.Size = UDim2.new(0.25, 0, 0.899999797, 0)
+
+ 
+
+TPs_2.Name = "TPs"
+
+TPs_2.Parent = NAV
+
+TPs_2.BackgroundColor3 = Color3.fromRGB(0, 136, 0)
+
+TPs_2.BackgroundTransparency = 0.250
+
+TPs_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+TPs_2.BorderSizePixel = 0
+
+TPs_2.Position = UDim2.new(0.0472531095, 0, 0.261437953, 0)
+
+TPs_2.Size = UDim2.new(0.899999976, 0, 0.167695448, 0)
+
+TPs_2.Font = Enum.Font.SourceSans
+
+TPs_2.Text = "TPs"
+
+TPs_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+TPs_2.TextScaled = true
+
+TPs_2.TextSize = 14.000
+
+TPs_2.TextWrapped = true
+
+ 
+
+Autos_2.Name = "Autos"
+
+Autos_2.Parent = NAV
+
+Autos_2.BackgroundColor3 = Color3.fromRGB(0, 136, 0)
+
+Autos_2.BackgroundTransparency = 0.250
+
+Autos_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Autos_2.BorderSizePixel = 0
+
+Autos_2.Position = UDim2.new(0.0472531095, 0, 0.048414439, 0)
+
+Autos_2.Size = UDim2.new(0.899999976, 0, 0.167695448, 0)
+
+Autos_2.Font = Enum.Font.SourceSans
+
+Autos_2.Text = "Auto"
+
+Autos_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+Autos_2.TextScaled = true
+
+Autos_2.TextSize = 14.000
+
+Autos_2.TextWrapped = true
+
+ 
+
+UIGridLayout_3.Parent = NAV
+
+UIGridLayout_3.FillDirection = Enum.FillDirection.Vertical
+
+UIGridLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+
+UIGridLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+
+UIGridLayout_3.CellSize = UDim2.new(0.899999976, 0, 0.100000001, 0)
+
+ 
+
+Drag.Name = "Drag"
+
+Drag.Parent = MF
+
+Drag.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+Drag.BackgroundTransparency = 1.000
+
+Drag.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+Drag.BorderSizePixel = 0
+
+Drag.Position = UDim2.new(-0.00146615889, 0, 1.37963738e-07, 0)
+
+Drag.Size = UDim2.new(0.863841355, 0, 0.0956428424, 0)
+
+Drag.Font = Enum.Font.SourceSans
+
+Drag.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+Drag.TextSize = 14.000
+
+ 
+
+TOPBAR.Name = "TOPBAR"
+
+TOPBAR.Parent = MF
+
+TOPBAR.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+
+TOPBAR.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+TOPBAR.BorderSizePixel = 0
+
+TOPBAR.Size = UDim2.new(1, 0, 0.100000001, 0)
+
+ 
+
+CLOSE.Name = "CLOSE"
+
+CLOSE.Parent = TOPBAR
+
+CLOSE.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+
+CLOSE.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+CLOSE.BorderSizePixel = 0
+
+CLOSE.Position = UDim2.new(0.945067942, 0, 0, 0)
+
+CLOSE.Size = UDim2.new(1, 0, 1, 0)
+
+CLOSE.SizeConstraint = Enum.SizeConstraint.RelativeYY
+
+CLOSE.Font = Enum.Font.SourceSans
+
+CLOSE.Text = "X"
+
+CLOSE.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+CLOSE.TextSize = 14.000
+
+ 
+
+MIN.Name = "MIN"
+
+MIN.Parent = TOPBAR
+
+MIN.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+
+MIN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+
+MIN.BorderSizePixel = 0
+
+MIN.Position = UDim2.new(0.862374485, 0, -0.0435729921, 0)
+
+MIN.Size = UDim2.new(1, 0, 1, 0)
+
+MIN.SizeConstraint = Enum.SizeConstraint.RelativeYY
+
+MIN.Font = Enum.Font.SourceSans
+
+MIN.Text = "-"
+
+MIN.TextColor3 = Color3.fromRGB(0, 0, 0)
+
+MIN.TextScaled = true
+
+MIN.TextSize = 14.000
+
+MIN.TextWrapped = true
+
+ 
+
+-- Scripts:
+
+ 
+
+local function XIME_fake_script() -- Drag.Drag 
+
+    local script = Instance.new('LocalScript', Drag)
+
+ 
+
+    local mouseStartX = nil
+
+    local mouseStartY = nil
+
+    local moving = false
+
+    local mf = script.Parent.Parent
+
+    local mouse = game.Players.LocalPlayer:GetMouse()
+
+    local startPos = UDim2.new(.6,0,.65,0)
+
+    local uip = game:GetService("UserInputService")
+
+    
+
+    script.Parent.MouseButton1Down:Connect(function()
+
+        mouse = game.Players.LocalPlayer:GetMouse()
+
+        mouseStartX = mouse.X
+
+        mouseStartY = mouse.Y
+
+        moving = true
+
+        while moving do
+
+            mf.Position = startPos + UDim2.new(0,mouse.X - mouseStartX, 0, mouse.Y - mouseStartY)
+
+            wait(.01)
+
+        end
+
+    end)
+
+    
+
+    --[[
+
+    script.Parent.MouseButton1Up:Connect(function()
+
+        moving = false
+
+        startPos = mf.Position
+
+    end)
+
+    ]]
+
+    
+
+    uip.InputEnded:Connect(function(input)
+
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+
+            moving = false
+
+            startPos = mf.Position
+
+        end
+
+    end)
+
+end
+
+coroutine.wrap(XIME_fake_script)()
+
+local function EIOJBG_fake_script() -- MF.CTRL 
+
+    local script = Instance.new('LocalScript', MF)
+
+ 
+
+    local CALDERAPOS = CFrame.new(-221, 48, -3327)
+
+    
+
+    
+
+    local nav = script.Parent.NAV
+
+    local top = script.Parent.TOPBAR
+
+    local con = script.Parent.CONTENT
+
+    local open = true
+
+    local autoDodge = false
+
+    local autoFarmCaldera = false
+
+    local fighting = false
+
+    
+
+    local dodgeR = game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Information"):WaitForChild("RemoteFunction")
+
+    
+
+    
+
+    ------------------------------------
+
+    ------------------------------------
+
+    --           GAME LOGIC           --
+
+    ------------------------------------
+
+    ------------------------------------
+
+    
+
+    local function TPTO(cf)
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cf
+
+    end
+
+    
+
+    local function decideEnemy()
+
+        local battleID = game.Players.LocalPlayer.Character.FightInProgress.Value
+
+        for i,ename in pairs(enemyOrder) do
+
+            for ii, enemy in pairs(game.workspace.Living:GetChildren())do
+
+                if enemy.Name == ename and enemy:FindFirstChild("FightInProgress") ~= nil and enemy.FightInProgress.Value == battleID then
+
+                    return enemy
+
+                end
+
+            end
+
+        end
+
+    end
+
+    
+
+    local function FIREPROXIMITY(Obj, Amount, Skip)
+
+        if Obj.ClassName == "ProximityPrompt" then 
+
+            Amount = Amount or 1
+
+            local PromptTime = Obj.HoldDuration
+
+            if Skip then 
+
+                Obj.HoldDuration = 0
+
+            end
+
+            for i = 1, Amount do 
+
+                Obj:InputHoldBegin()
+
+                if not Skip then 
+
+                    wait(Obj.HoldDuration)
+
+                end
+
+                Obj:InputHoldEnd()
+
+            end
+
+            Obj.HoldDuration = PromptTime
+
+        else 
+
+            error("userdata<ProximityPrompt> expected")
+
+        end
+
+    end
+
+    
+
+    local function healUp()
+
+        local char = game.Players.LocalPlayer.Character
+
+        local ogcframe = char.HumanoidRootPart.CFrame
+
+        local doc = game.Workspace.NPCs:WaitForChild("Doctor")
+
+        local doccframe = doc.HumanoidRootPart.CFrame
+
+        local prompt = doc.Head.ProximityPrompt
+
+    
+
+        char.HumanoidRootPart.CFrame = doccframe
+
+        wait(.25)
+
+        FIREPROXIMITY(prompt, 1, true)
+
+        wait(.25)
+
+        local function getOption()
+
+            for i,v in pairs(game.Players.LocalPlayer.PlayerGui.NPCDialogue.BG.Options:GetChildren())do
+
+                if v:IsA("TextButton") and v.Text == "Yes please!" then
+
+                    return v
+
+                end
+
+            end
+
+        end
+
+    
+
+        local args = {
+
+            [1] = getOption()
+
+        }
+
+    
+
+        game.Players.LocalPlayer.PlayerGui.NPCDialogue.RemoteEvent:FireServer(unpack(args))
+
+        wait(.1)
+
+        char.HumanoidRootPart.CFrame = ogcframe
+
+    end
+
+    
+
+    local function handleDodges()
+
+        wait(.01)
+
+        if autoDodge then
+
+            dodgeR:FireServer({true,true},"DodgeMinigame")
+
+            wait(.1)
+
+            dodgeR:FireServer({true,true},"DodgeMinigame")
+
+        end
+
+    end
+
+    
+
+    local function handleCalderaFarm()  
+
+        while autoFarmCaldera do
+
+            
+
+            if game.Players.LocalPlayer.Character:FindFirstChild("FightInProgress") ~= nil then
+
+                fighting = true
+
+            else
+
+                fighting = false
+
+            end
+
+            
+
+            if fighting == false then
+
+                if game.Players.LocalPlayer.Character.Humanoid.Health < game.Players.LocalPlayer.Character.Humanoid.MaxHealth then
+
+                    healUp()
+
+                    wait(.5)
+
+                end
+
+                TPTO(OUTERCALDERAPOS)
+
+            end
+
+            
+
+            wait(.5)
+
+            if game.Players.LocalPlayer.PlayerGui.Combat.ActionBG.Visible == true then
+
+                fighting = true
+
+                local enemy = decideEnemy()
+
+                for i,v in pairs(attackOrder)do
+
+                    local attackArgs = {[1] = "Attack",[2] = v,[3] = {["Attacking"] = enemy}}
+
+                    local teamArgs = {[1] = game.Players.LocalPlayer.Character.FightInProgress.Value}
+
+    
+
+                    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Data"):WaitForChild("GetOtherTeam"):InvokeServer(unpack(teamArgs))
+
+                    game:GetService("Players").LocalPlayer.PlayerGui.Combat.CombatHandle.RemoteFunction:InvokeServer(unpack(attackArgs))
+
+    
+
+                    local fistArgs = {[1] = true,[2] = "FistQTE"}
+
+                    game.ReplicatedStorage.Remotes.Information.RemoteFunction:FireServer(unpack(fistArgs))
+
+                end
+
+                game.Players.LocalPlayer.PlayerGui.Combat.ActionBG.Visible = false
+
+            end
+
+    
+
+            wait(.5)
+
+            
+
+            
+
+        end
+
+        con.Autos.AutoDodge.Text = "Auto Dodge: OFF"
+
+        con.Autos.AutoFarmCaldera.Text = "Auto Farm Caldera: OFF"
+
+    end
+
+    
+
+    game.Players.LocalPlayer.PlayerGui.Combat.ResetOnSpawn = false
+
+    game.Players.LocalPlayer.PlayerGui.Combat.Block:GetPropertyChangedSignal("Visible"):Connect(handleDodges)
+
+    
+
+    ------------------------------------
+
+    ------------------------------------
+
+    --              CTRL              --
+
+    ------------------------------------
+
+    ------------------------------------
+
+    
+
+    local function SWITCHCON(name)
+
+        for i,v in pairs(con:GetChildren())do
+
+            if v.Name ~= name and v:IsA("ScrollingFrame") then
+
+                v.Visible = false
+
+            else
+
+                v.Visible = true
+
+            end
+
+        end
+
+    end
+
+    
+
+    top.MIN.Activated:Connect(function()
+
+        if open then
+
+            open = false
+
+            con.Visible = false
+
+            nav.Visible = false
+
+            script.Parent.BackgroundTransparency = 1
+
+        else
+
+            open = true
+
+            con.Visible = true
+
+            nav.Visible = true
+
+            script.Parent.BackgroundTransparency = .25
+
+        end
+
+    end)
+
+    
+
+    top.CLOSE.Activated:Connect(function()
+
+        autoDodge = false
+
+        script.Parent.Parent:Destroy()
+
+    end)
+
+    
+
+    for i,v in pairs(nav:GetChildren())do
+
+        if v:IsA("TextButton") then
+
+            v.Activated:Connect(function()
+
+                SWITCHCON(v.Name)
+
+            end)
+
+        end
+
+    end
+
+    
+
+    ------------------------------------
+
+    ------------------------------------
+
+    --              TPS               --
+
+    ------------------------------------
+
+    ------------------------------------
+
+    
+
+    con.TPs.AutoDoctor.Activated:Connect(healUp)
+
+    
+
+    con.TPs.Caldera.Activated:Connect(function()
+
+        TPTO(CALDERAPOS)
+
+    end)
+
+    
+
+    ------------------------------------
+
+    ------------------------------------
+
+    --              AUTOS             --
+
+    ------------------------------------
+
+    ------------------------------------
+
+    
+
+    con.Autos.AutoDodge.Activated:Connect(function()
+
+        if autoDodge and not autoFarmCaldera then
+
+            autoDodge = false
+
+            con.Autos.AutoDodge.Text = "Auto Dodge: OFF"
+
+        else
+
+            autoDodge = true
+
+            con.Autos.AutoDodge.Text = "Auto Dodge: ON"
+
+        end
+
+    end)
+
+    
+
+    con.Autos.AutoFarmCaldera.Activated:Connect(function()
+
+        if autoFarmCaldera then
+
+            autoFarmCaldera = false
+
+            con.Autos.AutoFarmCaldera.Text = "Auto Farm Caldera: OFF"
+
+        else
+
+            autoFarmCaldera = true
+
+            autoDodge = true
+
+            con.Autos.AutoDodge.Text = "Auto Dodge: ON"
+
+            con.Autos.AutoFarmCaldera.Text = "Auto Farm Caldera: ON"
+
+            handleCalderaFarm()
+
+        end
+
+    end)
+
+    
+
+    
+
+end
+
+coroutine.wrap(EIOJBG_fake_script)()
+
