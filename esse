@@ -982,7 +982,7 @@ local function EIOJBG_fake_script() -- MF.CTRL
 
             autoFarmCaldera = false
 
-            con.Autos.AutoFarmCaldera.Text = "Auto Farm Caldera: OFF"
+             con.Autos.AutoFarmCaldera.Text = "Auto Farm Caldera: OFF"
 
         else
 
@@ -1005,6 +1005,4 @@ local function EIOJBG_fake_script() -- MF.CTRL
     
 
 end
-
-coroutine.wrap(EIOJBG_fake_script)()
 
